@@ -20,15 +20,18 @@ class DatabaseSeeder extends Seeder
     {
         $Data = (new FastExcel)->import('Healthiness Dashboard.xlsx', function ($line) {
             return Data::create([
-                'issue_type' => $line['Issue Type'],
-                'key' => $line['Key'],
-                'project' => $line['Project'],
+                'it_project' => $line['It Project'],
+                'summary' => $line['Summary'],
+                'name_project' => $line['Name Project'],
                 'assignee' => $line['Assignee'],
                 'reporter' => $line['Reporter'],
                 'priority' => $line['Priority'],
                 'status' => $line['Status'],
+                'created' => $line['Created'],
                 'squad' => $line['Squad']
+                
             ]);
         });
+        
     }
 }

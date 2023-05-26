@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 Route::post('/insert-data', [DataController::class, 'store']);
+Route::post('/filter-data', [DataController::class, 'filterData']);
 Route::put('/update-data/{id}', [DataController::class, 'update']);
 Route::get('/data/{id}', [DataController::class, 'show']);
 Route::get('/data', [DataController::class, 'index']);

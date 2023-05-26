@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('datas', function (Blueprint $table) {
             $table->id();
-            $table->string('issue_type');
-            $table->string('key');
-            $table->string('project');
+            $table->string('it_project');
+            $table->string('summary');
+            $table->string('name_project');
             $table->string('assignee');
             $table->string('reporter');
             $table->string('priority');
             $table->string('status');
+            $table->date('created');
             $table->string('squad');
             $table->timestamps();
         });

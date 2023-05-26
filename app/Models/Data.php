@@ -10,13 +10,14 @@ class Data extends Model
     use HasFactory;
     protected $table = 'datas';
     protected $fillable = [
-        'issue_type',
-        'key',
-        'project',
+        'it_project',
+        'summary',
+        'name_project',
         'assignee',
         'reporter',
         'priority',
         'status',
+        'created',
         'squad',
     ];
 }
